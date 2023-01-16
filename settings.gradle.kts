@@ -24,7 +24,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ARK-Android-Feature-Home"
+rootProject.name = "ARK-Android-Feature-Dashboard"
 include(":app")
-include(":feature-home")
-include(":feature-home-api")
+include(":feature-dashboard")
+include(":feature-dashboard-api")
