@@ -1,9 +1,9 @@
 package com.thoughtworks.ark.feature.dashboard.api
 
-import androidx.fragment.app.Fragment
+import android.content.Context
 import com.thoughtworks.ark.router.annotation.Service
 
 @Service
 interface DashboardApi {
-    fun getDashboardFragment(): Fragment
+    fun showToast(context: Context, msg: String)
 }
