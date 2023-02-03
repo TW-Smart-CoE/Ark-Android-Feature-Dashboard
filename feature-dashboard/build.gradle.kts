@@ -24,6 +24,7 @@ androidLibrary {
 dependencies {
     api(project(":feature-dashboard-api"))
     autoImplementation("feature-home-api","1.0.0")
+    autoImplementation("ui","1.0.0")
 
     implementation(libs.core.ktx)
     implementation(libs.material)
@@ -35,8 +36,6 @@ dependencies {
 
     implementation(libs.router)
     kapt(libs.router.compiler)
-
-    api(libs.ark.ui)
 
     testImplementation(libs.junit4)
 
