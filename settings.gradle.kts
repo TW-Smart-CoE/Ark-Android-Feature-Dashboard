@@ -12,15 +12,15 @@ fun initBuildLogic() {
         return stdout.toString().trim()
     }
 
-    if (!file("BuildLogic").exists()) {
+    if (!file("../BuildLogic").exists()) {
         println("Init build logic...")
         //clone build logic to BuildLogic dir
-        val result = execCmd("git clone -b main https://github.com/TW-Smart-CoE/BuildLogic.git BuildLogic")
+        val result = execCmd("git clone -b main https://github.com/TW-Smart-CoE/BuildLogic.git ../BuildLogic")
         print(result)
         println("Build logic init success")
     } else {
         println("Update build logic...")
-        val result = execCmd("cd BuildLogic git pull origin/main")
+        val result = execCmd("cd ../BuildLogic git pull origin/main")
         print(result)
         println("Update build logic success")
     }
@@ -34,7 +34,7 @@ fun readConfig(name: String): String {
 }
 
 pluginManagement {
-    includeBuild("BuildLogic")
+    includeBuild("../BuildLogic")
     repositories {
         gradlePluginPortal()
         google()
